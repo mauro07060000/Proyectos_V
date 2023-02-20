@@ -18,18 +18,19 @@ int main() {  bool Salida = false;
       cout << "¿Cual Es El Archivo Que Desea Leer?" << endl;
     cin >> NombreArhcivo;
   Archivo = LeerArchivo(NombreArhcivo, Play, T);
-  if(!Archivo) cout << "El Archvio No Existe";
+  if(!Archivo) cout << "El Archvio No Existe" << endl;
   while (Archivo) {
-      cout << "¿Que Opcion Desea?" << endl;
-      cout << "1. Ver El Contenido Del Archivo" << endl;
-      cout << "2. Motrar Los Autores Existentes" << endl;
-      cout << "3. Mostrar Las Canciones De Un Autor" << endl;
-      cout << "4. Mostrar Los Albums Presentes Del Archivo" << endl;
-      cout << "5. Mostrar Las Canciones Presentes De Un Album" << endl;
-      cout << "6. Mostrar Las Canciones Y Los Almbums Presentes Del Archivo"
-           << endl
-           << endl;
+      cout << " |-| "<< "¿Que Opcion Desea?" << endl;
+      cout << " |-| "<< "1. Ver El Contenido Del Archivo" << endl;
+      cout << " |-| "<< "2. Motrar Los Autores Existentes" << endl;
+      cout << " |-| "<< "3. Mostrar Las Canciones De Un Autor" << endl;
+      cout << " |-| "<< "4. Mostrar Los Albums Presentes Del Archivo"<< endl;
+      cout << " |-| "<< "5. Mostrar Las Canciones Presentes De Un Album"<< endl;
+      cout << " |-| "<< "6. Mostrar Las Canciones Y Los Almbums Presentes Del Archivo" << endl;
+      cout << " |-| "<< "7. Salir Del Programa" << endl << endl;
+     cout << endl;
       cin >> op;
+     cout << endl;
       switch (op) {
       case 1: {
         ImprimirArchivo(Play);
@@ -40,7 +41,10 @@ int main() {  bool Salida = false;
         break;
       }
       case 3: {
-        Canciones_A(Play, "autor2");
+         string aux;
+         cout << " |-| "<< "¿Que Autor?"<< " |-| " << endl;
+        cin >> aux;
+        Canciones_A(Play, aux);
         break;
       }
       case 4: {
@@ -48,7 +52,10 @@ int main() {  bool Salida = false;
         break;
       }
       case 5: {
-        Album_C("album2_au2", Play);
+         string aux;
+         cout << " |-| "<< "¿Cual Album?"<< " |-| " << endl;
+        cin >> aux;
+        Album_C(aux, Play);
         break;
       }
       case 6: {

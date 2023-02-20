@@ -66,22 +66,22 @@ void MostrarAutores(list<Cancion> Play) {
     Ej.insert(Cancion.Autor);
   }
   for (const auto e : Ej) {
-    cout << "Autor: " << e << endl;
+    cout << "Autor: " << " |-| "<< e << " |-| "<< endl;
   }
   cout << endl;
 }
 
 void ImprimirArchivo(list<Cancion> Play) {
-  for (const auto Cancion : Play) {
-        cout << endl
+    cout << endl
          << "------------------------------------" << endl
          << "|      El Archivo Contiene         |" << endl
          << "------------------------------------" << endl;
-    cout << "Nombre: " << Cancion.Nombre << endl;
-    cout << "Autor: " << Cancion.Autor << endl;
-    cout << "Album: " << Cancion.Album << endl;
-    cout << "Año: " << Cancion.Ano << endl;
-    cout << "Genero: " << Cancion.Genero << endl;
+  for (const auto Cancion : Play) {
+    cout << "Nombre: " << " |-| "<< Cancion.Nombre << endl;
+    cout << "Autor: " << "  |-| "<< Cancion.Autor << endl;
+    cout << "Album: " << "  |-| "<< Cancion.Album << endl;
+    cout << "Año: " << "    |-| "<< Cancion.Ano << endl;
+    cout << "Genero: " << " |-| "<< Cancion.Genero << endl;
     cout << endl;
   }
 }
@@ -94,7 +94,7 @@ void Canciones_A(list<Cancion> Play, string e) {
     }
   }
   for (const auto u : E) {
-    cout << "Canciones Del Autor: " << u << endl;
+    cout << "Canciones Del Autor: " << " |-| " << u  << " |-| " << endl;
   }
   cout << endl;
 }
@@ -124,7 +124,7 @@ void Album_C(string e, list<Cancion> Play) {
     }
   }
   for (const auto u : E) {
-    cout << "Canciones Del Album: " << u << endl;
+    cout << "Canciones Del Album: " << " |-| "<< u  << " |-| " << endl;
   }
   cout << endl;
 }
@@ -136,11 +136,6 @@ void Can_Nom_A(list<Cancion> Play) {
     Y.Nombre = Cancion.Nombre;
     Y.Album = Cancion.Album;
     l.push_back(Y);
-  }
-  for (auto u : l) {
-    cout << "|-| Album: " << u.Album << "|-|"
-         << "|-| Año: " << u.Nombre << "|-|" << endl;
-    ;
   }
   l.sort();
   cout << "Albums y Canciones: " << endl;
